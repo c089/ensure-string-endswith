@@ -1,0 +1,23 @@
+{
+  "name": "ensure-string-endswith",
+  "version": "1.0.0",
+  "description": "appends a character to a string if it does not end with it already",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec spec.js"
+  },
+  "keywords": [
+    "string"
+  ],
+  "author": "Christoph Neuroth <christoph.neuroth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/c089/ensure-string-endswith"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^2.0.0",
+    "eslint": "^0.14.1",
+    "mocha": "^2.1.0"
+  }
+}
