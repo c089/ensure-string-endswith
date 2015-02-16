@@ -10,6 +10,9 @@
     "string"
   ],
   "author": "Christoph Neuroth <christoph.neuroth@gmail.com>",
+  "contributors": [
+    { "name": "Alexander Schmidt", "url": "https://github.com/lxanders/" }
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/c089/ensure-string-endswith"
