@@ -1,6 +1,6 @@
 {
   "name": "ensure-string-endswith",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "appends a character to a string if it does not end with it already",
   "main": "index.js",
   "scripts": {
