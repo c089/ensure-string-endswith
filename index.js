@@ -1,14 +1,14 @@
 'use strict';
 
-function checkInput(string) {
+function ensureTypeIsString(string) {
     if (typeof string !== 'string') {
         throw new Error('Expected a string, got: ' + string);
     }
 }
 
-function checkInputLength(characterToEndWith) {
-    if (characterToEndWith.length !== 1) {
-        throw new Error('Expected a character, got: ' + characterToEndWith);
+function ensureStringLengthOfOne(string) {
+    if (string.length !== 1) {
+        throw new Error('Expected a character, got: ' + string);
     }
 }
 
@@ -17,10 +17,10 @@ function getLastCharacter(string) {
 }
 
 module.exports = function (characterToEndWith) {
-    checkInputLength(characterToEndWith);
+    ensureStringLengthOfOne(characterToEndWith);
 
     return function (string) {
-        checkInput(string);
+        ensureTypeIsString(string);
 
         if (getLastCharacter(string) === characterToEndWith) {
             return string;
