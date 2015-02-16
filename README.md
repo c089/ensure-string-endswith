@@ -6,7 +6,7 @@ Creates a function that appends a given character to a string, if (and only if) 
 
 ## usage
 
-```
+```js
 var anyString = 'anyString',
     stringEndingWithSlash = 'endsWith/',
     ensureStringEndsWithSlash = ensureStringEndsWith('/');
