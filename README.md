@@ -2,10 +2,15 @@
 
 [![Travis](https://img.shields.io/travis/c089/ensure-string-endswith.svg)]()
 
-creates a function that appends a given character to a string, but only if it
-does not already end with that character.
+Creates a function that appends a given character to a string, if (and only if) it does not already end with that character.
+
+## usage
 
 ```
-var withSlash = ensureStringEndsWith('/');
-> withSlash('foo') === withSlash('foo/')
+var anyString = 'anyString',
+    stringEndingWithSlash = 'endsWith/',
+    ensureStringEndsWithSlash = ensureStringEndsWith('/');
+
+ensureStringEndsWithSlash(anyString) === anyString + '/';                   // true
+ensureStringEndsWithSlash(stringEndingWithSlash) === stringEndingWithSlash; // true
 ```
