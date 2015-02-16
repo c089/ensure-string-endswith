@@ -1,15 +1,31 @@
 'use strict';
-module.exports = function (characterToEndWith) {
-    if (characterToEndWith.length !== 1) {
-        throw new Error('Expected a character, got: ' + characterToEndWith);
+
+function ensureTypeIsString(string) {
+    if (typeof string !== 'string') {
+        throw new Error('Expected a string, got: ' + string);
     }
+}
+
+function ensureStringLengthOfOne(string) {
+    if (string.length !== 1) {
+        throw new Error('Expected a character, got: ' + string);
+    }
+}
+
+function getLastCharacter(string) {
+    return string[string.length - 1];
+}
+
+module.exports = function (characterToEndWith) {
+    ensureStringLengthOfOne(characterToEndWith);
 
     return function (string) {
-        if (typeof string !== 'string') {
-            throw new Error('Expected a string, got: ' + string);
+        ensureTypeIsString(string);
+
+        if (getLastCharacter(string) === characterToEndWith) {
+            return string;
         }
-        var lastCharacter = string[string.length - 1];
-        if (lastCharacter === characterToEndWith) return string;
+
         return string + characterToEndWith;
     }
 };
