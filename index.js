@@ -6,19 +6,19 @@ function checkInput(string) {
     }
 }
 
+function getLastCharacter(string) {
+    return string[string.length - 1];
+}
+
 module.exports = function (characterToEndWith) {
     if (characterToEndWith.length !== 1) {
         throw new Error('Expected a character, got: ' + characterToEndWith);
     }
 
     return function (string) {
-        var lastCharacter;
-
         checkInput(string);
 
-        lastCharacter = string[string.length - 1];
-
-        if (lastCharacter === characterToEndWith) {
+        if (getLastCharacter(string) === characterToEndWith) {
             return string;
         }
 
