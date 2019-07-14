@@ -1,16 +1,3 @@
-# ensure-string-endswith
+# unmaintained
 
-[![Travis](https://img.shields.io/travis/c089/ensure-string-endswith/master.svg)](https://travis-ci.org/c089/ensure-string-endswith)
-
-Creates a function that appends a given character to a string, if (and only if) it does not already end with that character.
-
-## usage
-
-```js
-var anyString = 'anyString',
-    stringEndingWithSlash = 'endsWith/',
-    ensureStringEndsWithSlash = ensureStringEndsWith('/');
-
-ensureStringEndsWithSlash(anyString) === anyString + '/';                   // true
-ensureStringEndsWithSlash(stringEndingWithSlash) === stringEndingWithSlash; // true
-```
+this was mostly an exercise of publishing to npm.
